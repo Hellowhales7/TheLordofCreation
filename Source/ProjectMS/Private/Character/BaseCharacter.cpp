@@ -12,6 +12,9 @@ ABaseCharacter::ABaseCharacter()
 	PrimaryActorTick.bCanEverTick = true;
 
 	AbilitySystemComponent = CreateDefaultSubobject<UAbilitySystemComponent>(TEXT("AbilitySystemComponent"));
+	AbilitySystemComponent->SetIsReplicated(true);
+	AbilitySystemComponent->SetReplicationMode(EGameplayEffectReplicationMode::Mixed);
+	PlayerAttributeSet = CreateDefaultSubobject<UPlayerAttributeSet>(TEXT("PlayerAttributeSet"));
 }
 
 // Called when the game starts or when spawned
@@ -19,11 +22,13 @@ void ABaseCharacter::BeginPlay()
 {
 	Super::BeginPlay();
 	
+
 	if (IsValid(AbilitySystemComponent))
 	{
 		PlayerAttributeSet = AbilitySystemComponent->GetSet<UPlayerAttributeSet>();
 	}
 }
+
 
 // Called every frame
 void ABaseCharacter::Tick(float DeltaTime)

@@ -3,6 +3,7 @@
 
 #include "AbilitySystem/PlayerAttributeSet.h"
 #include "Net/UnrealNetwork.h"
+#include "GameplayEffectExtension.h"
 
 UPlayerAttributeSet::UPlayerAttributeSet()
 {
@@ -56,6 +57,7 @@ void UPlayerAttributeSet::OnRep_DefensivePower(const FGameplayAttributeData& Old
 {
 	GAMEPLAYATTRIBUTE_REPNOTIFY(UPlayerAttributeSet, DefensivePower, OldDefensivePower);
 }
+
 
 
 

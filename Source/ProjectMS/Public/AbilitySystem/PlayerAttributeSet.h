@@ -72,5 +72,4 @@ public:
 
 	UFUNCTION()
 	virtual void OnRep_DefensivePower(const FGameplayAttributeData& OldDefensivePower);
-
 };
