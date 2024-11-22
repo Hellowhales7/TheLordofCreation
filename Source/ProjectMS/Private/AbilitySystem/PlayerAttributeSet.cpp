@@ -21,6 +21,11 @@ void UPlayerAttributeSet::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& 
 	DOREPLIFETIME_CONDITION_NOTIFY(UPlayerAttributeSet, Level, COND_None, REPNOTIFY_Always);
 	DOREPLIFETIME_CONDITION_NOTIFY(UPlayerAttributeSet, AttackPower, COND_None, REPNOTIFY_Always);
 	DOREPLIFETIME_CONDITION_NOTIFY(UPlayerAttributeSet, DefensivePower, COND_None, REPNOTIFY_Always);
+	DOREPLIFETIME_CONDITION_NOTIFY(UPlayerAttributeSet, AbilityHaste, COND_None, REPNOTIFY_Always);
+	DOREPLIFETIME_CONDITION_NOTIFY(UPlayerAttributeSet, MovementSpeed, COND_None, REPNOTIFY_Always);
+	DOREPLIFETIME_CONDITION_NOTIFY(UPlayerAttributeSet, HealthRegen, COND_None, REPNOTIFY_Always);
+	DOREPLIFETIME_CONDITION_NOTIFY(UPlayerAttributeSet, AttackRangeSize, COND_None, REPNOTIFY_Always);
+	DOREPLIFETIME_CONDITION_NOTIFY(UPlayerAttributeSet, ProjectileSpeed, COND_None, REPNOTIFY_Always);
 }
 
 void UPlayerAttributeSet::OnRep_Health(const FGameplayAttributeData& OldHealth)
@@ -56,6 +61,31 @@ void UPlayerAttributeSet::OnRep_AttackPower(const FGameplayAttributeData& OldAtt
 void UPlayerAttributeSet::OnRep_DefensivePower(const FGameplayAttributeData& OldDefensivePower)
 {
 	GAMEPLAYATTRIBUTE_REPNOTIFY(UPlayerAttributeSet, DefensivePower, OldDefensivePower);
+}
+
+void UPlayerAttributeSet::OnRep_AbilityHaste(const FGameplayAttributeData& OldAbilityHaste)
+{
+	GAMEPLAYATTRIBUTE_REPNOTIFY(UPlayerAttributeSet, AbilityHaste, OldAbilityHaste);
+}
+
+void UPlayerAttributeSet::OnRep_MovementSpeed(const FGameplayAttributeData& OldMovementSpeed)
+{
+	GAMEPLAYATTRIBUTE_REPNOTIFY(UPlayerAttributeSet, MovementSpeed, OldMovementSpeed);
+}
+
+void UPlayerAttributeSet::OnRep_HealthRegen(const FGameplayAttributeData& OldHealthRegen)
+{
+	GAMEPLAYATTRIBUTE_REPNOTIFY(UPlayerAttributeSet, HealthRegen, OldHealthRegen);
+}
+
+void UPlayerAttributeSet::OnRep_AttackRangeSize(const FGameplayAttributeData& OldAttackRangeSize)
+{
+	GAMEPLAYATTRIBUTE_REPNOTIFY(UPlayerAttributeSet, AttackRangeSize, OldAttackRangeSize);
+}
+
+void UPlayerAttributeSet::OnRep_ProjectileSpeed(const FGameplayAttributeData& OldProjectileSpeed)
+{
+	GAMEPLAYATTRIBUTE_REPNOTIFY(UPlayerAttributeSet, ProjectileSpeed, OldProjectileSpeed);
 }
 
 
