@@ -50,26 +50,6 @@ public:
 	FGameplayAttributeData DefensivePower;
 	ATTRIBUTE_ACCESSORS(UPlayerAttributeSet, DefensivePower);
 
-	UPROPERTY(BlueprintReadOnly, Category = "Attributes", ReplicatedUsing = OnRep_AbilityHaste)
-	FGameplayAttributeData AbilityHaste;
-	ATTRIBUTE_ACCESSORS(UPlayerAttributeSet, AbilityHaste);
-
-	UPROPERTY(BlueprintReadOnly, Category = "Attributes", ReplicatedUsing = OnRep_MovementSpeed)
-	FGameplayAttributeData MovementSpeed;
-	ATTRIBUTE_ACCESSORS(UPlayerAttributeSet, MovementSpeed);
-
-	UPROPERTY(BlueprintReadOnly, Category = "Attributes", ReplicatedUsing = OnRep_HealthRegen)
-	FGameplayAttributeData HealthRegen;
-	ATTRIBUTE_ACCESSORS(UPlayerAttributeSet, HealthRegen);
-
-	UPROPERTY(BlueprintReadOnly, Category = "Attributes", ReplicatedUsing = OnRep_AttackRangeSize)
-	FGameplayAttributeData AttackRangeSize;
-	ATTRIBUTE_ACCESSORS(UPlayerAttributeSet, AttackRangeSize);
-
-	UPROPERTY(BlueprintReadOnly, Category = "Attributes", ReplicatedUsing = OnRep_ProjectileSpeed)
-	FGameplayAttributeData ProjectileSpeed;
-	ATTRIBUTE_ACCESSORS(UPlayerAttributeSet, ProjectileSpeed);
-
 	virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
 	UFUNCTION()
@@ -92,19 +72,4 @@ public:
 
 	UFUNCTION()
 	virtual void OnRep_DefensivePower(const FGameplayAttributeData& OldDefensivePower);
-
-	UFUNCTION()
-	virtual void OnRep_AbilityHaste(const FGameplayAttributeData& OldAbilityHaste);
-
-	UFUNCTION()
-	virtual void OnRep_MovementSpeed(const FGameplayAttributeData& OldMovementSpeed);
-
-	UFUNCTION()
-	virtual void OnRep_HealthRegen(const FGameplayAttributeData& OldHealthRegen);
-
-	UFUNCTION()
-	virtual void OnRep_AttackRangeSize(const FGameplayAttributeData& OldAttackRangeSize);
-
-	UFUNCTION()
-	virtual void OnRep_ProjectileSpeed(const FGameplayAttributeData& OldProjectileSpeed);
 };
