@@ -9,6 +9,10 @@
   <img src="https://img.shields.io/badge/MultiPlay-red">
 </p>
 
+
+https://github.com/user-attachments/assets/a2af3c24-7251-438f-8e26-3f310a7b255f
+
+
 # Game Overview 
 뱀서류의 로그라이크 게임 만물의 영장입니다. 스팀을 통한 멀티플레이를 지원합니다. 
 
@@ -27,7 +31,10 @@
 
  <img width="50%" height="50%" align="center" src="https://github.com/user-attachments/assets/729589a2-e4bf-4cb4-bb91-3c7fa2cdfdbe" >
 
+<p></p>
+
 **<멀티플레이 지원 방식>**
+- 스팀을 통해서 멀티 플레이 지원합니다. 스팀을 켜고 게임을 플레이 하시면 됩니다. 
 
 ## 사양 및 개발환경
 - <img src="https://img.shields.io/badge/Unreal-0E1128?logo=unrealengine">**언리얼 엔진 개발**
